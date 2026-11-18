@@ -2,8 +2,8 @@ package geometry;
 
 public class Circle {
 	
-	private int radius;
-	private Point center;
+	protected int radius;
+	protected Point center;
 	private boolean selected;
 	
 	public Circle() {
@@ -22,6 +22,14 @@ public class Circle {
 	
 	public double area() {
 		return radius*radius*Math.PI;
+	}
+	
+	public boolean contains(int x, int y) {
+		return center.distance(new Point(x, y)) <= radius;
+	}
+	
+	public boolean contains(Point click) {
+		return contains(click.getX(), click.getY());
 	}
 	
 	public double circumference() {
