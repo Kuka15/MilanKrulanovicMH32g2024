@@ -1,11 +1,11 @@
 package geometry;
 
-public class Rectangle {
+public class Rectangle extends Shape{
 	
 	private Point upperLeft;
 	private int width;
 	private int height;
-	private boolean selected;
+	
 	
 	public Rectangle() {
 	
@@ -30,6 +30,28 @@ public class Rectangle {
 		return 2*height + 2*width;
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		// TODO Auto-generated method stub
+		upperLeft.moveTo(x, y);
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		// TODO Auto-generated method stub
+		upperLeft.moveBy(byX, byY);
+	}
+	
+	public int compareTo(Shape o) {
+		// TODO Auto-generated method stub
+		if (o instanceof Rectangle) {
+			Rectangle temp = (Rectangle) o;
+			return (int) (area() - temp.area());
+		}
+		return 0;
+	}
+	
+	@Override
 	public boolean contains(int x, int y) {
 		return
 		(x >= upperLeft.getX() && x <= upperLeft.getX() + width)
@@ -68,9 +90,7 @@ public class Rectangle {
 	public int getHeight() {
 		return height;
 	}
-	public boolean isSelected() {
-		return selected;
-	}
+	
 	public void setUpperLeft(Point upperLeft) {
 		this.upperLeft = upperLeft;
 	}
@@ -80,8 +100,7 @@ public class Rectangle {
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
+	
+	
 		
 }

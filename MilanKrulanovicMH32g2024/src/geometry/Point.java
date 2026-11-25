@@ -1,10 +1,10 @@
 package geometry;
 
-public class Point {
+public class Point extends Shape{
 	
 	private int x;
 	private int y;
-	private boolean selected;
+	
 	
 //	implicitno, podrazumevani konstruktor
 //	ukoliko ne postoje drugi konstruktori, ne mora eksplicitno da se navodi
@@ -35,6 +35,23 @@ public class Point {
 		return Math.sqrt(dx*dx + dy*dy);
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		// TODO Auto-generated method stub
+		this.x = x;
+		this.y = y;
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		// TODO Auto-generated method stub
+		x += byX;
+		y += byY;
+	}
+	
+	
+	
+	@Override
 	public boolean contains(int x, int y) {
 		return distance(new Point(x,y)) <= 2;
 	}
@@ -65,9 +82,7 @@ public class Point {
 		return y;
 	}
 
-	public boolean isSelected() {
-		return selected;
-	}
+	
 
 // 	set metode - u okviru ove metode x se odnosi iskljucivo na parametre a ne na argumente
 	public void setX(int x) {
@@ -77,10 +92,18 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	public void setSelected(boolean selected) {
-		this.selected = selected;
+
+	@Override
+	public int compareTo(Shape o) {
+		// TODO Auto-generated method stub
+		if(o instanceof Point) {
+			Point temp = (Point) o;
+			return (int) (distance(new Point(0, 0)) - temp.distance(new Point(0, 0)));
+		}
+		return 0;
 	}
+
+
 
 	
 }

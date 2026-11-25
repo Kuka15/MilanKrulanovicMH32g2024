@@ -55,62 +55,72 @@ public class Testing {
 //		public Rectangle(Point upperLeft, int width, int height) {...}
 		Rectangle r2 = new Rectangle(new Point(20,20), 50, 50);
 //		toString je zaduzena za tekstualnu reprezentaciju 
-		System.out.println(r2.toString());
-		System.out.println(r2);
+//		System.out.println(r2.toString());
+//		System.out.println(r2);
 //		equals je zaduzena za poredjenje referenci
 //		Rectangle r3 = r2;
 		Rectangle r4 = new Rectangle(new Point(20,20), 50, 50);
 //		pokazuje da li se referencira na isti objekat a ne jel isti
-		System.out.println(r2.equals(r4));
+//		System.out.println(r2.equals(r4));
 		
-		System.out.println("Da li su pravougaonici instance klase Object?");
+//		System.out.println("Da li su pravougaonici instance klase Object?");
 //		instanceof je operator koji proverava da li je objekat instanca neke klase
-		System.out.println(r2 instanceof Object);
+//		System.out.println(r2 instanceof Object);
 //		r2 kao referenca je rectangle ali objekat na koji pokazuje je vise stvari istovremeno
 //		klasa rectangle nasledjuje klasu object
 //		referenca omogucava pristup metodama
 //		onaj ko izvrsava metodu je zapravo objekat
 		
-		Object ob = new Object();
-		System.out.println("Objekti klase Object nisu instance bilo koje druge klase");
-		System.out.println(ob instanceof Rectangle);
+//		Object ob = new Object();
+//		System.out.println("Objekti klase Object nisu instance bilo koje druge klase");
+//		System.out.println(ob instanceof Rectangle);
+//		
+//		System.out.println("Testiranje toString metoda:");
+//		System.out.println(p1);
+//		System.out.println(l1);
+//		System.out.println(c1);
+//		System.out.println(r2);
 		
-		System.out.println("Testiranje toString metoda:");
-		System.out.println(p1);
-		System.out.println(l1);
-		System.out.println(c1);
-		System.out.println(r2);
-		
-		System.out.println("Testiranje equals metode:");
-		System.out.println(p1.equals(r2));
-		System.out.println(p1.equals(p2));
-		System.out.println(p1.equals(ob));
-		Line l2 = new Line();
-		Point p3 = new Point(200,100);
-		l2.setStartPoint(p3);
-		l2.setEndPoint(new Point());
-		System.out.println(l1.equals(l2));
-		Circle c2 = new Circle(5, p3);
-		System.out.println(c1.equals(c2));
-		System.out.println(" ");
-		System.out.println(r1);
-		System.out.println(r2);
+//		System.out.println("Testiranje equals metode:");
+//		System.out.println(p1.equals(r2));
+//		System.out.println(p1.equals(p2));
+//		System.out.println(p1.equals(ob));
+//		Line l2 = new Line();
+//		Point p3 = new Point(200,100);
+//		l2.setStartPoint(p3);
+//		l2.setEndPoint(new Point());
+//		System.out.println(l1.equals(l2));
+//		Circle c2 = new Circle(5, p3);
+//		System.out.println(c1.equals(c2));
+//		System.out.println(" ");
+//		System.out.println(r1);
+//		System.out.println(r2);
 //		r2.setWidth(20);
 //		r2.setHeight(10);
-		System.out.println(r1.equals(r2));
+//		System.out.println(r1.equals(r2));
 		
-		System.out.println();
-		System.out.println("ispravak");
-		System.out.println(l1);
-		System.out.println(l2);
-		System.out.println(l1.equals(l2));
-		Line l3 = new Line(new Point (200,100), new Point (0,0));
-		System.out.println(l3);
-		System.out.println(l3.equals(l2));
+		//System.out.println();
+		//System.out.println("ispravak");
+		//System.out.println(l1);
+		//System.out.println(l2);
+		//System.out.println(l1.equals(l2));
+		//Line l3 = new Line(new Point (200,100), new Point (0,0));
+		//System.out.println(l3);
+		//System.out.println(l3.equals(l2));//
 		
+//Vezbe 25.11.2026. testiranje nmp cega		
+		l1.setEndPoint(new Point(50, 50));
+//		System.out.println(l1);
+		l1.moveBy(50, 30);
+//		System.out.println(l1);
+	
+//		System.out.println(p1);
+	//	System.out.println(p2);
+		//System.out.println(p1.compareTo(p2));
+	
 	}
 	
-
+		
 }
 
 
